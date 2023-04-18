@@ -1,0 +1,77 @@
+{
+  "name": "jenkins-taro-demo",
+  "taroConfig": {
+    "version": "1.0.0"
+  },
+  "private": true,
+  "description": "",
+  "templateInfo": {
+    "name": "default",
+    "typescript": true,
+    "css": "css"
+  },
+  "scripts": {
+    "build:weapp:test": "npm run build:weapp -- --env development",
+    "build:weapp": "taro build --type weapp",
+    "dev:weapp": "npm run build:weapp -- --watch",
+    "release:weapp:test": "npm run build:weapp:test -- --upload --robot=1 --desc='test环境'",
+    "release:weapp:prod": "npm run build:weapp -- --upload --robot=2 --desc='prod环境'"
+  },
+  "browserslist": [
+    "last 3 versions",
+    "Android >= 4.1",
+    "ios >= 8"
+  ],
+  "author": "",
+  "dependencies": {
+    "@apollo/client": "^3.7.1",
+    "@babel/runtime": "^7.7.7",
+    "@nutui/nutui-react-taro": "^1.4.11",
+    "@tarojs/components": "3.5.7",
+    "@tarojs/helper": "3.5.7",
+    "@tarojs/plugin-framework-react": "3.5.7",
+    "@tarojs/plugin-html": "^3.6.2",
+    "@tarojs/plugin-platform-alipay": "3.5.7",
+    "@tarojs/plugin-platform-jd": "3.5.7",
+    "@tarojs/plugin-platform-qq": "3.5.7",
+    "@tarojs/plugin-platform-swan": "3.5.7",
+    "@tarojs/plugin-platform-tt": "3.5.7",
+    "@tarojs/plugin-platform-weapp": "3.5.7",
+    "@tarojs/react": "3.5.7",
+    "@tarojs/router": "3.5.7",
+    "@tarojs/runtime": "3.5.7",
+    "@tarojs/shared": "3.5.7",
+    "@tarojs/taro": "3.5.7",
+    "@tarojs/taro-h5": "3.5.7",
+    "babel-plugin-import": "^1.13.6",
+    "react": "^18.0.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.8.0",
+    "@pmmmwh/react-refresh-webpack-plugin": "^0.5.5",
+    "@tarojs/cli": "3.5.7",
+    "@tarojs/plugin-mini-ci": "^3.6.2",
+    "@tarojs/webpack5-runner": "3.5.7",
+    "@types/react": "^18.0.0",
+    "@types/webpack-env": "^1.13.6",
+    "@typescript-eslint/eslint-plugin": "^5.20.0",
+    "@typescript-eslint/parser": "^5.20.0",
+    "babel-preset-taro": "3.5.7",
+    "eslint": "^8.12.0",
+    "eslint-config-taro": "3.5.7",
+    "eslint-plugin-import": "^2.12.0",
+    "eslint-plugin-react": "^7.8.2",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "husky": "^8.0.2",
+    "lint-staged": "^13.0.4",
+    "prettier": "^2.8.0",
+    "qiniu": "^7.8.0",
+    "react-refresh": "^0.11.0",
+    "stylelint": "^14.4.0",
+    "typescript": "^4.1.0",
+    "webpack": "5.69.0"
+  },
+  "lint-staged": {
+    "*.{js,ts,jsx,tsx,md,css}": "prettier --write --ignore-unknown"
+  }
+}
