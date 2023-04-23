@@ -1,9 +1,9 @@
 import { getCurrentEnv, EEnvType } from '~/utils/env'
 
-/** api域名 */
+/** api域名：实际使用替换成自己项目对应的域名 */
 export const API_HOST = {
-  [EEnvType.dev]: 'xxx',
-  [EEnvType.prod]: 'xxxx',
+  [EEnvType.dev]: 'test',
+  [EEnvType.prod]: 'prod',
 }
 
 /** 当前的环境变量 */
